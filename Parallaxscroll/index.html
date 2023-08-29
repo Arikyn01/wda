@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+    <title>Site usando Parallax</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">moons</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Trabalhos</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="/assets/img/img/stars.png" id="stars">
+        <img src="/assets/img/img/moon.png" id="moon">
+        <h2 id="text">moons site</h2>
+        <a href="#sec" id="btn">Inscreva-se</a>
+        <img src="/assets/img/img/mountains_behind.png" id="mountains_behind">
+        <img src="/assets/img/img/mountains_front.png" id="mountains_front">
+    </section>
+    <div class="sec" id="sec">
+        <h2>Paralax scroll efeito</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolore? Eum necessitatibus maxime ab, sit
+            quidem voluptatibus! Impedit quo assumenda aliquam quis modi labore nam est. Accusamus, modi reprehenderit.
+            Perferendis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolore? Eum necessitatibus maxime ab, sit
+            quidem voluptatibus! Impedit quo assumenda aliquam quis modi labore nam est. Accusamus, modi reprehenderit.
+            Perferendis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolore? Eum necessitatibus maxime ab, sit
+            quidem voluptatibus! Impedit quo assumenda aliquam quis modi labore nam est. Accusamus, modi reprehenderit.
+            Perferendis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolore? Eum necessitatibus maxime ab, sit
+            quidem voluptatibus! Impedit quo assumenda aliquam quis modi labore nam est. Accusamus, modi reprehenderit.
+            Perferendis.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, dolore? Eum necessitatibus maxime ab, sit
+            quidem voluptatibus! Impedit quo assumenda aliquam quis modi labore nam est. Accusamus, modi reprehenderit.
+            Perferendis.</p><br><br>
+    </div>
+    <script>
+        let stars = document.getElementById("stars")
+        let moon = document.getElementById("moon")
+        let mountains_behind = document.getElementById("mountains_behind")
+        let mountains_front = document.getElementById("mountains_front")
+        let text = document.getElementById("text")
+        let btn = document.getElementById("btn")
+        let header = document.querySelector("header")
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+            stars.style.left = value*0.5+'px';
+            moon.style.top = value*1.05+'px';
+            mountains_behind.style.top = value*0.6+'px';
+            mountains_front.style.top = value*0+'px';
+            text.style.marginRight = value*2+'px';
+            text.style.marginTop = value*0.5+'px';
+            btn.style.marginTop = value*1.5+'px';
+            header.style.marginTop = value*0.5+'px';
+        })
+    </script>
+</body>
+
+</html>
